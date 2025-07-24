@@ -2,7 +2,7 @@
 
 This project is a microservice that uses a GitHub Action to create dated markdown files. The service is triggered by a POST request to the `/trigger` endpoint.
 
-## How it Works
+## How it Worksdf
 
 1.  A POST request is sent to `/trigger`.
 2.  The `api/index.py` script receives the request and triggers a `repository_dispatch` event on GitHub.
