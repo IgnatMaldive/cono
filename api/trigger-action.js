@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     if (!title || !content) {
       return res.status(400).json({ error: 'Title and content are required' });
     }
-    const response = await fetch('https://api.github.com/repos/IgnatMaldive/micro-allinone2/dispatches', {
+    const response = await fetch('https://api.github.com/repos/IgnatMaldive/cono/dispatches', {
       method: 'POST',
       headers: {
         'Accept': 'application/vnd.github.v3+json',

@@ -108,7 +108,7 @@ def create_post():
         },
     }
 
-    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/micro-allinone2')
+    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/cono')
     response = requests.post(f'https://api.github.com/repos/{repo}/dispatches', headers=headers, json=data)
 
     if response.ok:
@@ -132,7 +132,7 @@ def update_post():
     content = request.form['content']
     title = request.form.get('title', 'Untitled Post')
 
-    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/micro-allinone2')
+    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/cono')
 
     headers = {
         'Accept': 'application/vnd.github.v3+json',
@@ -183,7 +183,7 @@ def update_post():
 def delete_post():
     filename = request.form['filename']
     
-    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/micro-allinone2')
+    repo = os.environ.get('GITHUB_REPOSITORY', 'IgnatMaldive/cono')
     
     # Get the current SHA of the file
     headers = {

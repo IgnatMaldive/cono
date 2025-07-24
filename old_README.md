@@ -1,4 +1,4 @@
-# micro-allinone2
+# cono
 
 This project is a microservice that uses a GitHub Action to create dated markdown files. The service is triggered by a POST request to the `/trigger` endpoint.
 
@@ -14,7 +14,7 @@ This project is a microservice that uses a GitHub Action to create dated markdow
 The following environment variables are used to configure the application:
 
 *   `GHTOKEN`: A GitHub personal access token with the `repo` scope.
-*   `GITHUB_REPOSITORY`: The name of the GitHub repository (e.g., `IgnatMaldive/micro-allinone2`).
+*   `GITHUB_REPOSITORY`: The name of the GitHub repository (e.g., `IgnatMaldive/cono`).
 
 ## Troubleshooting
 

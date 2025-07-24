@@ -37,7 +37,7 @@ This project requires the following environment variables for proper operation, 
 
 *   `GHTOKEN`: A GitHub Personal Access Token (PAT) is required for the Flask application to dispatch `repository_dispatch` events and to directly interact with the GitHub API for updating and deleting files. This token **must have the `repo` scope** to allow read/write access to your repository.
     *   You can generate a PAT in your GitHub settings under `Developer settings` > `Personal access tokens` > `Tokens (classic)`.
-*   `GITHUB_REPOSITORY`: The full name of your GitHub repository (e.g., `IgnatMaldive/micro-allinone2`). This is used by the Flask application to target the correct repository for API calls.
+*   `GITHUB_REPOSITORY`: The full name of your GitHub repository (e.g., `IgnatMaldive/cono`). This is used by the Flask application to target the correct repository for API calls.
 
 These environment variables should be set in the environment where the Flask application is run.
 
