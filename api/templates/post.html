@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+   <head>
+      <title>{{ post.title }}</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+      <a href="/">Back to Home</a>
+      <hr>
+      <h1>{{ post.frontmatter.title if post.frontmatter.title else post.title }}</h1>
+      {% if post.frontmatter.date %}
+      <p class="post-meta">{{ post.frontmatter.date }}</p>
+      {% endif %}
+      <div>
+         {{ post.html_content | safe }}
+      </div>
+   </body>
+</html>

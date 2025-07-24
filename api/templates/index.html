@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   <head>
+      <title>My Blog Slugaaadd</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+      <div class="container">
+         <h1>My Awesome Blog</h1>
+         <a href="{{ url_for('admin') }}">Admin</a>
+         <hr>
+         {% for post in posts %}
+            <div class="blog-card">
+               <div class="blog-post">
+                  <h2><a href="{{ url_for('post', filename=post.filename) }}">{{ post.frontmatter.title if post.frontmatter.title else post.title }}</a></h2>
+                  <p class="post-meta">{{ post.frontmatter.date if post.frontmatter.date else post.date }}</p>
+                  <div class="post-content">
+                     {{ post.content | safe }}
+                  </div>
+               </div>
+            </div>
+         {% endfor %}
+         <hr>
+         <form action="/trigger" method="post">
+            <button type="submit">Create New Post</button>
+         </form>
+      </div>
+   </body>
+</html>
