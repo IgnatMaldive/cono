@@ -3,7 +3,7 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const pat = process.env.GITHUB_PAT;
+  const pat = process.env.GHTOKEN;
   if (!pat) {
     return res.status(500).json({ error: 'GitHub PAT not configured' });
   }

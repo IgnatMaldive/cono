@@ -1,12 +1,14 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, jsonify
 import os
 import markdown
 from datetime import datetime
 import requests
 import random
 import string
+from .crud import crud
 
 app = Flask(__name__)
+app.register_blueprint(crud)
 
 def parse_frontmatter(content):
     frontmatter = {}
